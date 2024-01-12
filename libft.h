@@ -6,7 +6,7 @@
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:21:30 by ozasahin          #+#    #+#             */
-/*   Updated: 2024/01/12 11:06:24 by ozasahin         ###   ########.fr       */
+/*   Updated: 2024/01/12 11:17:18 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,14 @@ void	*ft_memset(void *s, int c, size_t n);
 int		ft_atoi(const char *nptr);
 char	*ft_itoa(int n);
 /*-------------printf-------------*/
-
+void	ft_print_str(char *s, size_t *octet);
+void	ft_print_ptr(unsigned long long addr, size_t *octet);
+void	ft_print_nbr(int nb, size_t *octet);
+void	ft_print_unbr(unsigned int nb, size_t *octet);
+void	ft_print_hexa(unsigned int nb, char *base, size_t	*octet);
+void	ft_print_char(int c, size_t *octet);
+void	print_var(char offset, va_list arg, size_t *octet);
+int		ft_printf(const char *entry, ...);
 /*-------------str-------------*/
 char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);

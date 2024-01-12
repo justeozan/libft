@@ -7,7 +7,7 @@ SRCS	=	\
 			is/ft_isalnum.c\
 			is/ft_isalpha.c\
 			is/ft_isascii.c\
-			is/ft_isdigit.\
+			is/ft_isdigit.c\
 			is/ft_isprint.c\
 			\
 			lst/ft_lstadd_back.c\
@@ -30,7 +30,6 @@ SRCS	=	\
 			\
 			nbr/ft_atoi.c\
 			nbr/ft_itoa.c\
-			nbr/ft_atol.c\
 			\
 			printf/ft_printf.c\
 			printf/ft_printf_utils.c\
