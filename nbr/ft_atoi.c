@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ozasahin <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 22:10:39 by ozasahin          #+#    #+#             */
-/*   Updated: 2023/11/15 22:10:39 by ozasahin         ###   ########.fr       */
+/*   Updated: 2024/01/12 11:08:28 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../libft.h"
 
 int	ft_atoi(const char *nptr)
 {

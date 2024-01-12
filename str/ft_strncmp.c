@@ -6,11 +6,11 @@
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 14:45:02 by ozasahin          #+#    #+#             */
-/*   Updated: 2023/11/10 17:09:30 by ozasahin         ###   ########.fr       */
+/*   Updated: 2024/01/12 11:00:29 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

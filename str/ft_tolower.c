@@ -6,11 +6,11 @@
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:19:46 by ozasahin          #+#    #+#             */
-/*   Updated: 2023/11/10 17:07:59 by ozasahin         ###   ########.fr       */
+/*   Updated: 2024/01/12 11:00:07 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 int	ft_tolower(int c)
 {

@@ -6,11 +6,11 @@
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 11:01:46 by ozasahin          #+#    #+#             */
-/*   Updated: 2023/11/10 17:28:26 by ozasahin         ###   ########.fr       */
+/*   Updated: 2024/01/12 11:00:48 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

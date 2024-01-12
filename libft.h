@@ -6,7 +6,7 @@
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:21:30 by ozasahin          #+#    #+#             */
-/*   Updated: 2024/01/12 10:52:36 by ozasahin         ###   ########.fr       */
+/*   Updated: 2024/01/12 11:06:24 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stddef.h>
+# include <stdarg.h>
 
 /*-------------file-------------*/
 void	ft_putchar_fd(char c, int fd);
@@ -78,6 +79,8 @@ void	*ft_memset(void *s, int c, size_t n);
 /*-------------nbr-------------*/
 int		ft_atoi(const char *nptr);
 char	*ft_itoa(int n);
+/*-------------printf-------------*/
+
 /*-------------str-------------*/
 char	**ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);

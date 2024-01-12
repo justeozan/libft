@@ -6,11 +6,11 @@
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:43:50 by ozasahin          #+#    #+#             */
-/*   Updated: 2023/12/19 18:03:04 by ozasahin         ###   ########.fr       */
+/*   Updated: 2024/01/12 11:08:54 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

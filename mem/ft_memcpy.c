@@ -6,11 +6,11 @@
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 10:29:25 by ozasahin          #+#    #+#             */
-/*   Updated: 2023/11/10 17:24:29 by ozasahin         ###   ########.fr       */
+/*   Updated: 2024/01/12 11:08:44 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

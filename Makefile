@@ -32,6 +32,9 @@ SRCS	=	\
 			nbr/ft_itoa.c\
 			nbr/ft_atol.c\
 			\
+			printf/ft_printf.c\
+			printf/ft_printf_utils.c\
+			\
 			str/ft_split.c\
 			str/ft_strrchr.c\
 			str/ft_strdup.c\
