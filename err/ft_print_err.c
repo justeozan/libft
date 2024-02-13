@@ -1,19 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_print_err.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/17 09:21:43 by ozasahin          #+#    #+#             */
-/*   Updated: 2024/02/13 15:24:26 by ozasahin         ###   ########.fr       */
+/*   Created: 2024/02/13 15:22:14 by ozasahin          #+#    #+#             */
+/*   Updated: 2024/02/13 15:25:06 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-
-void	ft_putstr_fd(char *s, int fd)
+void	ft_print_err(char *err_txt)
 {
-	if (s != NULL)
-		write(fd, s, ft_strlen(s));
+	ft_putstr_fd(err_txt, 2);
+	exit(EXIT_FAILURE);
 }

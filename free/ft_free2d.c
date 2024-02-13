@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_free2d.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/17 09:21:43 by ozasahin          #+#    #+#             */
-/*   Updated: 2024/02/13 15:24:26 by ozasahin         ###   ########.fr       */
+/*   Created: 2024/02/13 15:25:31 by ozasahin          #+#    #+#             */
+/*   Updated: 2024/02/13 15:29:17 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-
-void	ft_putstr_fd(char *s, int fd)
+void	ft_free2d(char ***strs)
 {
-	if (s != NULL)
-		write(fd, s, ft_strlen(s));
+	unsigned int	i;
+
+	i = 0;
+	while ((*strs)[i])
+		free((*strs)[i++]);
+	free(*strs);
+	(*strs) = NULL;
 }
