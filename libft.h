@@ -6,7 +6,7 @@
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:21:30 by ozasahin          #+#    #+#             */
-/*   Updated: 2024/01/12 11:17:18 by ozasahin         ###   ########.fr       */
+/*   Updated: 2024/02/13 16:22:08 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,16 @@
 # include <stddef.h>
 # include <stdarg.h>
 
+/*-------------err-------------*/
+void	norm_is_not_ok(char **line);
+void	ft_print_err(char *err_txt);
 /*-------------file-------------*/
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
+/*-------------free-------------*/
+void	ft_free2d(char ***strs);
 /*-------------gnl-------------*/
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42

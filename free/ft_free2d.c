@@ -6,9 +6,11 @@
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:25:31 by ozasahin          #+#    #+#             */
-/*   Updated: 2024/02/13 15:29:17 by ozasahin         ###   ########.fr       */
+/*   Updated: 2024/02/13 16:04:42 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../libft.h"
 
 void	ft_free2d(char ***strs)
 {

@@ -1,8 +1,13 @@
 SRCS	=	\
+			err/ft_norm_err.c\
+			err/ft_print_err.c\
+			\
 			file/ft_putchar_fd.c\
 			file/ft_putendl_fd.c\
 			file/ft_putnbr_fd.c\
 			file/ft_putstr_fd.c\
+			\
+			free/ft_free2d.c\
 			\
 			is/ft_isalnum.c\
 			is/ft_isalpha.c\

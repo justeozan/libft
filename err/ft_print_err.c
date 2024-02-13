@@ -6,9 +6,11 @@
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:22:14 by ozasahin          #+#    #+#             */
-/*   Updated: 2024/02/13 15:25:06 by ozasahin         ###   ########.fr       */
+/*   Updated: 2024/02/13 16:04:18 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "../libft.h"
 
 void	ft_print_err(char *err_txt)
 {
