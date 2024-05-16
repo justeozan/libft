@@ -4,7 +4,6 @@ Libft is a library of functions that we use in 42's projects.
 
 ## Table of Contents
 
-- [About](https://github.com/justeozan/libft/blob/main/README.md/#About)
 - [About](#about)
 - [Usage](#usage)
 - [Installation](#installation)
