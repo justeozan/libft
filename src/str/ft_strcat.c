@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_err.c                                     :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 15:22:14 by ozasahin          #+#    #+#             */
-/*   Updated: 2024/05/16 12:12:40 by ozasahin         ###   ########.fr       */
+/*   Created: 2023/11/07 11:01:46 by ozasahin          #+#    #+#             */
+/*   Updated: 2024/05/16 13:52:14 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-void	exit_err(char *err_txt)
+char	*ft_strcat(char *dest, const char *src)
 {
-	ft_putstr_fd(err_txt, 2);
-	exit(EXIT_FAILURE);
+	int	i;
+	int	len;
+
+	i = 0;
+	len = ft_strlen(dest);
+	while (src[i])
+	{
+		dest[len + i] = src[i];
+		i++;
+	}
+	dest[len + i] = '\0';
+	return (dest);
 }

@@ -1,19 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_err.c                                     :+:      :+:    :+:   */
+/*   putstr_2d.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 15:22:14 by ozasahin          #+#    #+#             */
-/*   Updated: 2024/05/16 12:12:40 by ozasahin         ###   ########.fr       */
+/*   Created: 2024/05/15 17:00:47 by ozasahin          #+#    #+#             */
+/*   Updated: 2024/05/15 17:10:19 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-void	exit_err(char *err_txt)
+void	putstr_2d(char **tab)
 {
-	ft_putstr_fd(err_txt, 2);
-	exit(EXIT_FAILURE);
+	size_t	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		ft_putstr_fd(tab[i], 1);
+		write(1, "\n", 1);
+		i++;
+	}
 }

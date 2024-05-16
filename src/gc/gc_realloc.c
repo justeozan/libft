@@ -1,19 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_err.c                                     :+:      :+:    :+:   */
+/*   gc_realloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 15:22:14 by ozasahin          #+#    #+#             */
-/*   Updated: 2024/05/16 12:12:40 by ozasahin         ###   ########.fr       */
+/*   Created: 2024/04/29 15:12:26 by avialle-          #+#    #+#             */
+/*   Updated: 2024/05/16 13:41:09 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-void	exit_err(char *err_txt)
+static size_t	max_value_size_t(size_t v1, size_t v2)
 {
-	ft_putstr_fd(err_txt, 2);
-	exit(EXIT_FAILURE);
+	if (v1 > v2)
+		return (v1);
+	return (v2);
+}
+
+void	*gc_realloc(void *ptr, size_t old_size, size_t new_size, int gc_id)
+{
+	size_t	size;
+	void	*new;
+
+	if (new_size == 0)
+		return (gc_del_one(ptr, gc_id), NULL);
+	size = (size_t)max_value_size_t(old_size, new_size);
+	new = gc_malloc(size, gc_id);
+	if (ptr)
+		ft_memcpy(new, ptr, size);
+	gc_del_one(ptr, gc_id);
+	return (new);
 }

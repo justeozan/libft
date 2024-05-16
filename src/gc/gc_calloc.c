@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_err.c                                     :+:      :+:    :+:   */
+/*   gc_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 15:22:14 by ozasahin          #+#    #+#             */
-/*   Updated: 2024/05/16 12:12:40 by ozasahin         ###   ########.fr       */
+/*   Created: 2024/04/29 15:12:13 by avialle-          #+#    #+#             */
+/*   Updated: 2024/05/16 13:40:37 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-void	exit_err(char *err_txt)
+void	*gc_calloc(size_t nmemb, size_t size, int gc_id)
 {
-	ft_putstr_fd(err_txt, 2);
-	exit(EXIT_FAILURE);
+	void	*ptr;
+
+	ptr = gc_malloc(nmemb * size, gc_id);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, nmemb * size);
+	return (ptr);
 }

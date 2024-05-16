@@ -6,14 +6,19 @@
 #    By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/13 16:43:33 by ozasahin          #+#    #+#              #
-#    Updated: 2024/02/13 17:15:39 by ozasahin         ###   ########.fr        #
+#    Updated: 2024/05/16 13:53:08 by ozasahin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	libft.a
 
 SRCS	=	\
-			err/ft_norm_err.c\
+			2d/dup_2d.c\
+			2d/free_2d.c\
+			2d/free_matrix.c\
+			2d/len_2d.c\
+			2d/putstr_2d.c\
+			\
 			err/ft_print_err.c\
 			\
 			file/ft_putchar_fd.c\
@@ -21,7 +26,25 @@ SRCS	=	\
 			file/ft_putnbr_fd.c\
 			file/ft_putstr_fd.c\
 			\
-			free/ft_free2d.c\
+			gc/gc_add.c\
+			gc/gc_calloc.c\
+			gc/gc_clear.c\
+			gc/gc_del_one.c\
+			gc/gc_itoa.c\
+			gc/gc_lstmap.c\
+			gc/gc_lstnew.c\
+			gc/gc_malloc.c\
+			gc/gc_split.c\
+			gc/gc_strcut.c\
+			gc/gc_strdup.c\
+			gc/gc_strjoin.c\
+			gc/gc_strmapi.c\
+			gc/gc_strndup.c\
+			gc/gc_strtrim.c\
+			gc/gc_substr.c\
+			\
+			gnl/get_next_line_utils.c\
+			gnl/get_next_line.c\
 			\
 			is/ft_isalnum.c\
 			is/ft_isalpha.c\
@@ -72,32 +95,57 @@ SRCS	=	\
 			\
 
 SRCS_DIR	=	$(addprefix src/, $(SRCS))
+OBJS		=	$(addprefix obj/, $(SRCS:.c=.o))
 
 # Controls
-CC		=	gcc
-CFLAGS  =	-Wall -Wextra -Werror
-RM  	=	rm -f
+CC			=	cc -g3
+CFLAGS		=	-Wall -Wextra -Werror
+INCLUDES	=	-Iinclude -Ilibft
+LINKS		=	-Llibft -lft -L/usr/lib
+RM			=	rm -rf
 
-OBJS	=	$(addprefix obj/,$(SRCS:.c=.o))
+# Colors
+COLOR_RESET			=	\033[0m
+COLOR_RED			=	\033[0;31m
+COLOR_GREEN			=	\033[0;32m
+COLOR_PURPLE		=	\033[0;95m
+COLOR_BLUE			=	\033[0;34m
 
-all:	${NAME}
+# Messages
+CLEAR_MESSAGE		=	\033[0K\r\c
+MESSAGE_OK			=	[\033[32mOK\033[0m]
+MESSAGE_COMPILE		=	$(COLOR_BLUE)Compiling :$(COLOR_RESET)
+MESSAGE_DONE		=	$(MESSAGE_OK) libft compiled.
+MESSAGE_CLEAN		=	$(COLOR_PURPLE)Cleaning up...$(COLOR_RESET)
+MESSAGE_CLEAN_DONE	=	$(COLOR_PURPLE)Cleanup completed.$(COLOR_RESET)
+
+all:		${NAME}
 
 ${NAME}:	${OBJS}
-			@ar rc ${NAME} ${OBJS}
+	@ar rc ${NAME} ${OBJS}
+	@echo "$(MESSAGE_DONE)"
 
-obj/%.o: src/%.c | obj
-		@mkdir -p $(@D)
-		@$(CC) $(CFLAGS) -c $< -o $@
+# i can add "| obj"
+obj/%.o:	src/%.c
+	@echo "[...] libft... $(MESSAGE_COMPILE) $*.c\r\c"
+	@mkdir -p $(@D)
+	@$(CC) $(CFLAGS) -c $< -o $@
+	@echo "$(CLEAR_MESSAGE)"
 
-obj:
-		@mkdir -p obj
+# obj:
+# 	@mkdir -p obj
 
 clean:
-		@${RM} -r obj
+	@echo "$(MESSAGE_CLEAN)\c"
+	@${RM} obj
+	@echo "$(MESSAGE_CLEAN_DONE)"
 
-fclean:	clean
-		@${RM} ${NAME}
+fclean:		clean
+	@${RM} ${NAME}
 
-re:		fclean all
+re:			fclean all
+
+norm :
+	norminette | grep -v OK
 
 .PHONY:	all clean fclean re

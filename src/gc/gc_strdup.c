@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_err.c                                     :+:      :+:    :+:   */
+/*   gc_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 15:22:14 by ozasahin          #+#    #+#             */
-/*   Updated: 2024/05/16 12:12:40 by ozasahin         ###   ########.fr       */
+/*   Created: 2024/04/29 15:12:33 by avialle-          #+#    #+#             */
+/*   Updated: 2024/05/16 13:41:09 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-void	exit_err(char *err_txt)
+char	*gc_strdup(const char *str, int gc_id)
 {
-	ft_putstr_fd(err_txt, 2);
-	exit(EXIT_FAILURE);
+	char	*result;
+	size_t	length;
+
+	length = ft_strlen(str);
+	result = (char *)gc_malloc((length + 1) * sizeof(char), gc_id);
+	if (!result)
+		return (NULL);
+	length = 0;
+	while (str[length] != '\0')
+	{
+		result[length] = str[length];
+		length++;
+	}
+	result[length] = '\0';
+	return (result);
 }

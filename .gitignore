@@ -1,0 +1,35 @@
+# Ignore les fichiers générés par le compilateur
+*.o
+*.a
+*.out
+*.exe
+
+# Ignore les fichiers exécutables
+a.out
+*.exe
+
+# Ignore les fichiers générés lors de la compilation du code
+*.obj
+
+# Ignore les fichiers de débogage
+*.pdb
+*.su
+*.idb
+*.dSYM
+*.manifest
+
+# Ignore les fichiers de sauvegarde et temporaires
+*~
+\#*\#
+*.swp
+._*
+
+# Ignore les fichiers de cache ou de configuration
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Ignore les répertoires de sortie de construction
+bin/
+build/
+out/

@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_err.c                                     :+:      :+:    :+:   */
+/*   gc_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ozasahin <ozasahin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/13 15:22:14 by ozasahin          #+#    #+#             */
-/*   Updated: 2024/05/16 12:12:40 by ozasahin         ###   ########.fr       */
+/*   Created: 2024/04/29 15:12:35 by avialle-          #+#    #+#             */
+/*   Updated: 2024/05/16 13:41:09 by ozasahin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft.h"
 
-void	exit_err(char *err_txt)
+char	*gc_strjoin(char const *s1, char const *s2, int gc_id)
 {
-	ft_putstr_fd(err_txt, 2);
-	exit(EXIT_FAILURE);
+	char	*dest;
+
+	if (!s1 || !s2)
+		return (NULL);
+	dest = (char *)gc_malloc((ft_strlen(s1) \
+		+ ft_strlen(s2) + 1) * sizeof(char), gc_id);
+	if (!dest)
+		return (NULL);
+	dest[0] = '\0';
+	ft_strcat(dest, s1);
+	ft_strcat(dest, s2);
+	return (dest);
 }
