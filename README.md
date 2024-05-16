@@ -53,5 +53,3 @@ Contributions to Libft are welcome! If you find any bugs or want to suggest impr
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
-
-Ce README donne une brève description de la bibliothèque, explique comment l'utiliser, comment l'installer, où trouver la documentation, comment contribuer, et quelle licence est utilisée. Vous pouvez personnaliser ce README en fonction des spécificités de votre bibliothèque et de vos besoins.
