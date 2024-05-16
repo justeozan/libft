@@ -1,4 +1,3 @@
-```markdown
 # Libft
 
 Libft is a library of functions that we use in 42's projects.
