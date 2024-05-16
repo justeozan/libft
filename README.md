@@ -5,7 +5,7 @@ Libft is a library of functions that we use in 42's projects.
 
 ## Table of Contents
 
-- [About](#about)
+- [About](## About)
 - [Usage](#usage)
 - [Installation](#installation)
 - [Documentation](#documentation)
@@ -52,4 +52,3 @@ Contributions to Libft are welcome! If you find any bugs or want to suggest impr
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
