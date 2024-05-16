@@ -5,7 +5,7 @@ Libft is a library of functions that we use in 42's projects.
 
 ## Table of Contents
 
-- [About](## About)
+- [About](#About)
 - [Usage](#usage)
 - [Installation](#installation)
 - [Documentation](#documentation)
